@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../css/stylepages.css">
+    <title>Formulario</title>
+</head>
+<body>
+    <header>
+        <div id="marca">
+            <img src="../image/logo.JPG" alt="el logo" width="110" height="75">
+        </div>
+        <nav id="menu">
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="acercaDe.html">Acerca de....</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="contenido_formulario">
+     <h1>Complete la informacion</h1>
+     <form action="https://formspree.io/f/xbljgpzk" method="post">
+        
+     <fieldset>
+        <legend>Datos personales</legend>
+        <label for="nombre">Nombre [*]</label>
+        <input type="text" name="" size="10" maxlength="15" required>
+        <label for="apellido">Apellido [*]</label>
+        <input type="text" name="" size="10" maxlength="15" required><br><br>
+        <label for="dni">DNI [*]</label>
+        <input type="number" name="dni" id="" required>
+        <label for="tramite">Nro de tramite [*]</label>
+        <input type="password" name="tramite" id="" required>
+        <label for="fech_nac">Fecha de nacimiento [*]</label>
+        <input type="date" name="fech_nac" id="" required> <br><br>
+        <label for="correo">E-mail</label>
+        <input type="email" name="correo" id="">
+        <label for="adjunto">Adjuntar foto</label>
+        <input type="file" name="adjunto" id=""><br><br>
+     </fieldset>
+     <label for="comentarios">Escriba su consulta [*]</label>  
+     <textarea name="comentarios" id="" cols="30" rows="10" placeholder="Escriba aqui su consulta maximo 300 caracteres"></textarea>
+     <br><br>
+     <label for="turno">Seleccione el horario [*]</label> 
+     <select name="turno" id="" size="2">
+        <option value="1">Mañana</option>
+        <option value="2">Tarde</option>
+        <option value="3">Vespertino</option>
+        <option value="4">Noche</option>
+     </select>
+     <br><br>
+     <input type="checkbox" name="condiciones" id="" required>
+     Acepto los terminos y condiciones <br><br>
+     <input type="submit" value="Enviar datos"> 
+     <input type="reset" value="Borrar">
+     
+     </form>
+    </section>
+
+</body>
+</html>
