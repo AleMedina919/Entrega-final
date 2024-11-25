@@ -1,6 +1,4 @@
 # Tabla de contenidos
-
-
 - [Tabla de contenidos](#tabla-de-contenidos)
   - [Descripción](#descripción)
   - [Arquitectura del Proyecto](#arquitectura-del-proyecto)
