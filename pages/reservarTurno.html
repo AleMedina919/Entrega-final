@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../css/stylepages.css">
+    <title>Carrito de reservas</title>
+</head>
+
+<body>
+
+    <header id="Inicio">
+        <div id="marca">
+            <img src="../image/logo.JPG" alt="el logo" width="110" height="75">
+        </div>
+
+        <nav id="menu">
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="acercaDe.html">Acerca de....</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="formulario.html" >Formulario</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <div id="productos">
+        <div class="card" id="producto-1">
+         <span>Consulta Médica</span>
+         <span>Stock: Lunes <span id="lunes-1">10</span></span></span>
+         <span>Stock: Miércoles <span id="miercoles-1" >10</span></span></span>
+         <span>Precio: $5000</span>
+         <button onclick="mostrarDescripcion(1)">Ver descripción</button>
+         <button onclick="agregarAlCarrito(1, 'lunes')">Añadir al carrito (Lunes)</button>
+         <button onclick="agregarAlCarrito(1, 'miercoles')">Añadir al carrito (Miércoles)</button>
+        </div>
+
+        <div class="card" id="producto-2">
+         <span>Consulta + Estudio</span>
+         <span>Stock: Lunes <span id="lunes-2">10</span></span></span>
+         <span>Stock: Miércoles <span id="miercoles-2" >10</span></span></span>
+         <span>Precio: $6500</span>
+         <button onclick="mostrarDescripcion(2)">Ver descripción</button>
+         <button onclick="agregarAlCarrito(2, 'lunes')">Añadir al carrito (Lunes)</button>
+         <button onclick="agregarAlCarrito(2, 'miercoles')">Añadir al carrito (Miércoles)</button>
+        </div>
+
+        <div class="card" id="producto-3">
+         <span>Estudio médico</span>
+         <span>Stock: Martes <span id="martes-3">20</span></span></span>
+         <span>Stock: Viernes <span id="viernes-3">20</span></span></span>
+         <span>Precio: $2000</span>
+         <button onclick="mostrarDescripcion(3)">Ver descripción</button>
+         <button onclick="agregarAlCarrito(3, 'martes')">Añadir al carrito (Martes)</button>
+         <button onclick="agregarAlCarrito(3, 'viernes')">Añadir al carrito (Viernes)</button>
+        </div>
+
+    </div>
+
+    <div id="carrito">
+        <h2>Carrito de Compras</h2>
+        <ul id="lista-carrito"></ul>
+        <p>Subtotal: $<span id="subtotal-carrito">0</span></p>
+        <p>Descuento: $<span id="descuento-carrito">0</span></p>
+        <p>IVA (21%): $<span id="iva-carrito">0</span></p>
+        <p><strong>Total: $<span id="total-carrito">0</span></strong></p>
+        <button onclick="vaciarCarrito()">Vaciar Carrito</button>
+        <button onclick="mostrarCheckout()">Checkout</button>
+    </div>
+
+    <!-- Modal de Checkout -->
+    <div id="checkout-modal">
+        <div class="checkout-content">
+            <h2>Finalizar Compra</h2>
+            <p>Subtotal: $<span id="modal-subtotal">0</span></p>
+            <p>Descuento: $<span id="modal-descuento">0</span></p>
+            <p>IVA: $<span id="modal-iva">0</span></p>
+            <p><strong>Total a Pagar: $<span id="modal-total">0</span></strong></p>
+            <button onclick="realizarCompra()">Confirmar Compra</button>
+            <button onclick="cerrarCheckout()">Cancelar</button>
+        </div>
+    </div>
+
+
+    <div id="calendario"></div>
+
+    <script src="../js/apps.js"></script>
+
+</body>
+
+</html>
